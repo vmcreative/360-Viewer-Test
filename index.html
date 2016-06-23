@@ -1,0 +1,163 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>360 Photo Viewer Test</title>
+        <meta name="description" content="360_viewer_test">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <header>
+          <h1>360 Photo Viewer Test</h1>
+        </header>
+        <div class="section group">
+        	<div class="col left_column">
+            <h3>DESCRIPTION</h3>
+            <table class="tg">
+              <tr>
+                <td class="table_field">ROOM</td>
+                <td class="table_content">PETTY 303</td>
+              </tr>
+              <tr>
+                <td class="table_field">ADDRESS</td>
+                <td class="table_content">317 COLLEGE AVE</td>
+              </tr>
+              <tr>
+                <td class="table_field">TYPE</td>
+                <td class="table_content">REGISTRAR</td>
+              </tr>
+              <tr>
+                <td class="table_field">SEATS</td>
+                <td class="table_content">50</td>
+              </tr>
+            </table>
+            <table class="tg">
+              <tr>
+                <td class="table_field">RESOURCES</td>
+                <td class="table_content">
+                  <ul>
+                    <li><span>NEC NP1000 PROJECTOR</span>
+                      <div class="dropdown">
+                        <span>This is dropdown text for an item. It is an abbreviated description of the function of the item.</span>
+                      </div>
+                    </li>
+                    <li><span>7 FOOT PROJECTION SCREEN</span>
+                      <div class="dropdown">
+                        <span>This is dropdown text for an item. It is an abbreviated description of the function of the item.</span>
+                      </div>
+                    </li>
+                    <li><span>LENOVO M91P COMPUTER</span>
+                      <div class="dropdown">
+                        <span>This is dropdown text for an item. It is an abbreviated description of the function of the item.</span>
+                      </div>
+                    </li>
+                    <li><span>EXTRON MLC226IP MEDIA CONTROLLER</span>
+                      <div class="dropdown">
+                        <span>This is dropdown text for an item. It is an abbreviated description of the function of the item.</span>
+                      </div>
+                    </li>
+                    <li><span>EXTRON MLS406SA MEDIA CONTROLLER</span>
+                      <div class="dropdown">
+                        <span>This is dropdown text for an item. It is an abbreviated description of the function of the item.</span>
+                      </div>
+                    </li>
+                    <li><span>SENNHEISER EW100G2 LAVALIER MIC</span>
+                      <div class="dropdown">
+                        <span>This is dropdown text for an item. It is an abbreviated description of the function of the item.</span>
+                      </div>
+                    </li>
+                    <li><span>WILLIAMS PPAT35 ASSISTIVE AUDIO DEVICE</span>
+                      <div class="dropdown">
+                        <span>This is dropdown text for an item. It is an abbreviated description of the function of the item.</span>
+                      </div>
+                    </li>
+                    <li><span>SYLVANIA DVD/VCR/BLURAY</span>
+                      <div class="dropdown">
+                        <span>This is dropdown text for an item. It is an abbreviated description of the function of the item.</span>
+                      </div>
+                    </li>
+                    <li><span>ELMO P100 DOCUMENT CAMERA</span>
+                      <div class="dropdown">
+                        <span>This is dropdown text for an item. It is an abbreviated description of the function of the item.</span>
+                      </div>
+                    </li>
+                    <li><span>EXTRON IPI104AAP INTERCOM</span>
+                      <div class="dropdown">
+                        <span>This is dropdown text for an item. It is an abbreviated description of the function of the item.</span>
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+        	</div>
+        	<div class="col right_column">
+            <div id="photo_viewer">
+              <iframe id="classroom_view"
+                  width="100%"
+                  height="600px"
+                  allowfullscreen=""
+                  frameborder="0"
+                  src="https://vmcreative.github.io/vrview/?image=examples/test2.jpg&start_yaw=270">
+              </iframe>
+              <iframe id="podium_view"
+                  width="100%"
+                  height="600px"
+                  allowfullscreen=""
+                  frameborder="0"
+                  src="https://vmcreative.github.io/vrview/?image=examples/test1.jpg&start_yaw=270">
+              </iframe>
+              <div class="map-container">
+                <iframe id="map_view"
+                    width="100%"
+                    height="600px"
+                    allowfullscreen=""
+                    scrolling="no"
+                    frameborder="0"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBXQNsmT4Z_KScWAjUpt1w3mB-ptsvK0Bc&q=317+College+Ave,Greensboro+NC+27412" allowfullscreen>
+                </iframe>
+              </div>
+              <h2 class="noclick">Drag to pan.</h2>
+            </div>
+            <button id="view1">classroom view</button>
+            <button id="view2">podium view</button>
+            <button id="view3">map view</button>
+            <div id="support_info">
+              <h3>CLASSROOM SUPPORT</h3>
+              <p> Classroom support information goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+        	</div>
+        </div>
+        <footer>
+          <p>Footer stuff goes here.</p>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
