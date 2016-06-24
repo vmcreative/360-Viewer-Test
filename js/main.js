@@ -31,16 +31,14 @@ $(document).ready(function(){
 
 if (window.DeviceOrientationEvent) {
     window.addEventListener('deviceorientation', deviceOrientationHandler, false);
-    document.getElementById("doeSupported").innerText = "VR NOT SUPPORTED";
+    $("#photo_viewer h2").innerText = "";
 }
 
 var deviceOrientationData;
+
 function deviceOrientationHandler(evt) {
   deviceOrientationData = evt;
-  try {
-  } catch (ex) {
-    document.getElementById("ui_notice").addClass("hidden");
-    document.getElementById("doeSupported").innerText = "VR IS SUPPORTED";
-
+  try {} catch (ex) {
+    $("#photo_viewer h2").innerText = "Drag to pan.";
   }
 }
