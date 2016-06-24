@@ -22,16 +22,14 @@ $(document).ready(function(){
     });
 
     $(".map-container")
-	.click(function(){
-			$(this).find("iframe").addClass("clicked")})
-	.mouseleave(function(){
-			$(this).find("iframe").removeClass("clicked")});
+    	.click(function(){
+    			$(this).find("iframe").addClass("clicked")})
+    	.mouseleave(function(){
+    			$(this).find("iframe").removeClass("clicked")});
 
 });
 
+window.addEventListener('deviceorientation', orientationChange, false);
 
-if (Modernizr.deviceorientation) {
-    $("#photo_viewer h2").addClass("hidden");
-} else {
-    alert("Test");
-}
+function orientationChange(){
+  $("#photoviewer h2").addClass(hidden)};
