@@ -29,7 +29,18 @@ $(document).ready(function(){
 
 });
 
-window.addEventListener('deviceorientation', orientationChange, false);
+if (window.DeviceOrientationEvent) {
+    window.addEventListener('deviceorientation', deviceOrientationHandler, false);
+    document.getElementById("doeSupported").innerText = "VR NOT SUPPORTED";
+}
 
-function orientationChange(){
-  $("#photoviewer h2").addClass(hidden)};
+var deviceOrientationData;
+function deviceOrientationHandler(evt) {
+  deviceOrientationData = evt;
+  try {
+  } catch (ex) {
+    document.getElementById("ui_notice").addClass("hidden");
+    document.getElementById("doeSupported").innerText = "VR IS SUPPORTED";
+
+  }
+}
