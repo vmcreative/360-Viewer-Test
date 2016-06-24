@@ -30,27 +30,24 @@ $(document).ready(function(){
 });
 
 if (window.DeviceOrientationEvent) {
-<<<<<<< HEAD
-  window.addEventListener('deviceorientation', deviceOrientationHandler, false);
-  document.getElementById("ui-notice").innerText = "";
-=======
-    window.addEventListener('deviceorientation', deviceOrientationHandler, false);
-    $("#photo_viewer h2").innerText = "state 2";
->>>>>>> origin/gh-pages
-}
+        window.addEventListener('deviceorientation', deviceOrientationHandler, false);
+        document.getElementById("ui-notice").innerText = "";
+      }
 
 var deviceOrientationData;
 
-<<<<<<< HEAD
-function deviceOrientationHandler() {
-  try {
-    document.getElementById("ui-notice").innerText = "Drag to pan.";
-  } catch (ex) {}
-=======
-function deviceOrientationHandler(evt) {
-  deviceOrientationData = evt;
-  try {} catch (ex) {
-    $("#photo_viewer h2").innerText = "state 3";
-  }
->>>>>>> origin/gh-pages
-}
+      function deviceOrientationHandler(evt) {
+        deviceOrientationData = evt;
+        try {
+          timestamp.innerText = new Date(evt.timeStamp);
+          alpha.innerText = evt.alpha.toFixed(fixed);
+          beta.innerText = evt.beta.toFixed(fixed);
+          gamma.innerText = evt.gamma.toFixed(fixed);
+          var rotation = "rotate("+ evt.alpha +"deg) rotate3d(1,0,0, "+ (evt.gamma * -1)+"deg)";
+          h5logo.style.webkitTransform = rotation;
+          h5logo.style.transform = rotation;
+        } catch (ex) {
+          document.getElementById("ui-notice").innerText = "DRAG TO PAN";
+          //document.getElementById("doeSupported").hide();
+        }
+      }
