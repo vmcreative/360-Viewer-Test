@@ -30,5 +30,5 @@ $(document).ready(function(){
 });
 
 if (Modernizr.deviceorienation) {
-    $("#photo_viewer h2").addClass("hidden");
+    alert("This browser supports device orientation");
   }
