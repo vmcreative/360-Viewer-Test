@@ -31,7 +31,7 @@ $(document).ready(function(){
 
 if (window.DeviceOrientationEvent) {
     window.addEventListener('deviceorientation', deviceOrientationHandler, false);
-    $("#photo_viewer h2").innerText = "";
+    $("#photo_viewer h2").innerText = "state 2";
 }
 
 var deviceOrientationData;
@@ -39,6 +39,6 @@ var deviceOrientationData;
 function deviceOrientationHandler(evt) {
   deviceOrientationData = evt;
   try {} catch (ex) {
-    $("#photo_viewer h2").innerText = "Drag to pan.";
+    $("#photo_viewer h2").innerText = "state 3";
   }
 }
