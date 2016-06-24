@@ -30,15 +30,14 @@ $(document).ready(function(){
 });
 
 if (window.DeviceOrientationEvent) {
-    window.addEventListener('deviceorientation', deviceOrientationHandler, false);
-    $("#photo_viewer h2").innerText = "";
+  window.addEventListener('deviceorientation', deviceOrientationHandler, false);
+  document.getElementById("ui-notice").innerText = "";
 }
 
 var deviceOrientationData;
 
-function deviceOrientationHandler(evt) {
-  deviceOrientationData = evt;
-  try {} catch (ex) {
-    $("#photo_viewer h2").innerText = "Drag to pan.";
-  }
+function deviceOrientationHandler() {
+  try {
+    document.getElementById("ui-notice").innerText = "Drag to pan.";
+  } catch (ex) {}
 }
