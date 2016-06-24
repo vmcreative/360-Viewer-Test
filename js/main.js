@@ -26,7 +26,7 @@ $(document).ready(function(){
         console.log("DeviceOrientation is supported");
         // Listen for the event and handle DeviceOrientationEvent object
         window.addEventListener("deviceorientation", devOrientHandler, false);
-        $("#pho_viewer h2").addClass("hidden")};
+        $("#photo_viewer h2").addClass("hidden")};
 
     $('.map-container')
 	.click(function(){
