@@ -29,6 +29,6 @@ $(document).ready(function(){
 
 });
 
-if (Modernizr.deviceorienation) {
-    alert("This browser supports device orientation");
+if (Modernizr.deviceorientation) {
+    $("#photo_viewer h2").addClass("hidden");
   }
