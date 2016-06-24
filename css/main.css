@@ -390,9 +390,6 @@ p {
  .tg td{
    padding:10px 10px;
  }
- #photo_viewer h2 {
-   visibility: hidden;
- }
 }
 
 @media print,
