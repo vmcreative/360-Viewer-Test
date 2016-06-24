@@ -29,6 +29,9 @@ $(document).ready(function(){
 
 });
 
+
 if (Modernizr.deviceorientation) {
     $("#photo_viewer h2").addClass("hidden");
-  }
+} else {
+    alert("Test");
+}
