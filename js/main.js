@@ -21,17 +21,14 @@ $(document).ready(function(){
       $("#photo_viewer h2").hide();
     });
 
-    if (window.DeviceOrientationEvent) {
-        //checks for compatibility
-        console.log("DeviceOrientation is supported");
-        // Listen for the event and handle DeviceOrientationEvent object
-        window.addEventListener("deviceorientation", devOrientHandler, false);
-        $("#photo_viewer h2").addClass("hidden")};
-
-    $('.map-container')
+    $(".map-container")
 	.click(function(){
-			$(this).find('iframe').addClass('clicked')})
+			$(this).find("iframe").addClass("clicked")})
 	.mouseleave(function(){
-			$(this).find('iframe').removeClass('clicked')});
+			$(this).find("iframe").removeClass("clicked")});
 
 });
+
+if (Modernizr.deviceorienation) {
+    $("#photo_viewer h2").addClass("hidden");
+  }
