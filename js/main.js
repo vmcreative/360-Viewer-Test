@@ -27,30 +27,16 @@ $(document).ready(function(){
     	.mouseleave(function(){
     			$(this).find("iframe").removeClass("clicked")});
 
+    $(".resource_name").addClass("expand");
+    $(".resource_name").on("click", function(event) {
+      $(this).siblings().toggle();
+      $(this).toggleClass("collapse");
+    });
+
+    if (Modernizr.touch){
+       document.getElementById("ui-notice").innerText = "";
+    } else {
+       document.getElementById("ui-notice").innerText = "Drag to pan.";
+    }
+
 });
-
-if (window.DeviceOrientationEvent) {
-<<<<<<< HEAD
-  window.addEventListener('deviceorientation', deviceOrientationHandler, false);
-  document.getElementById("ui-notice").innerText = "";
-=======
-    window.addEventListener('deviceorientation', deviceOrientationHandler, false);
-    $("#photo_viewer h2").innerText = "state 2";
->>>>>>> origin/gh-pages
-}
-
-var deviceOrientationData;
-
-<<<<<<< HEAD
-function deviceOrientationHandler() {
-  try {
-    document.getElementById("ui-notice").innerText = "Drag to pan.";
-  } catch (ex) {}
-=======
-function deviceOrientationHandler(evt) {
-  deviceOrientationData = evt;
-  try {} catch (ex) {
-    $("#photo_viewer h2").innerText = "state 3";
-  }
->>>>>>> origin/gh-pages
-}
