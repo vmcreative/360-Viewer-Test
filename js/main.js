@@ -27,27 +27,16 @@ $(document).ready(function(){
     	.mouseleave(function(){
     			$(this).find("iframe").removeClass("clicked")});
 
+    $(".resource_name").addClass("expand");
+    $(".resource_name").on("click", function(event) {
+      $(this).siblings().toggle();
+      $(this).toggleClass("collapse");
+    });
+
+    if (Modernizr.touch){
+       document.getElementById("ui-notice").innerText = "";
+    } else {
+       document.getElementById("ui-notice").innerText = "Drag to pan.";
+    }
+
 });
-
-if (window.DeviceOrientationEvent) {
-        window.addEventListener('deviceorientation', deviceOrientationHandler, false);
-        document.getElementById("ui-notice").innerText = "";
-      }
-
-var deviceOrientationData;
-
-      function deviceOrientationHandler(evt) {
-        deviceOrientationData = evt;
-        try {
-          timestamp.innerText = new Date(evt.timeStamp);
-          alpha.innerText = evt.alpha.toFixed(fixed);
-          beta.innerText = evt.beta.toFixed(fixed);
-          gamma.innerText = evt.gamma.toFixed(fixed);
-          var rotation = "rotate("+ evt.alpha +"deg) rotate3d(1,0,0, "+ (evt.gamma * -1)+"deg)";
-          h5logo.style.webkitTransform = rotation;
-          h5logo.style.transform = rotation;
-        } catch (ex) {
-          document.getElementById("ui-notice").innerText = "DRAG TO PAN";
-          //document.getElementById("doeSupported").hide();
-        }
-      }

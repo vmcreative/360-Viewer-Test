@@ -32,7 +32,7 @@ html {
 ::selection {
     background: #b3d4fc;
     text-shadow: none;
-}
+}tf
 
 /*
  * A better looking default horizontal rule
@@ -119,6 +119,7 @@ footer p {
 #support_info {
   padding: 1rem .8rem;
   margin-top: .5rem;
+  height: 100%;
 }
 #support_info p {
   font-size: .8em;
@@ -147,6 +148,7 @@ p {
   left: 50%;
   margin: -1em 0em 0em -3em;
   color: white;
+  font-weight: lighter;
   opacity: 0.8;
   transition: opacity .25s ease-in-out;
     -moz-transition: opacity .25s ease-in-out;
@@ -190,50 +192,55 @@ p {
   border-spacing:0;
 }
 .tg td{
-  font-size:.8em;
-  padding:1rem .8rem;
-  border-style:none;border-width:0px;
-  overflow:hidden;
-  word-break:normal;
+  font-size: .8rem;
+  padding: 1rem .5rem;
+  border-style:none;border-width: 0px;
+  overflow: hidden;
+  word-break: normal;
 }
-.tg .table_content{
+.tg .tf{
+  width: 6em;
+  text-align: right;
+  font-weight: bold;
+  vertical-align: top
+}
+.tg .tc{
   vertical-align:top;
   overflow:visible;
-}
-.tg .table_field{
-  width: 6rem;
-  text-align: right;
-  font-weight:bold;
-  vertical-align:top
 }
 .tg ul {
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 .tg li {
   list-style-type: none;
-  width: 100%;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0.65rem;
+  text-indent: -1rem;
   font-weight: bold;
   color: #405080;
   position: relative;
   display: inline-block;
-  cursor: default;
+  cursor: pointer;
+}
+.tg li .expand:before {
+  content: "+ ";
+  font-family: monospace;
+  font-size: 1rem;
+}
+.tg li .collapse:before {
+  content: "- ";
 }
 .dropdown {
     display: none;
-    position: absolute;
-    background-color: #fdffd5;
-    width: 90%;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 1rem;
+    padding: .5rem;
+    margin-left: -1rem;
+    text-indent: 0;
     text-align: left;
-    font-weight: normal;;
+    font-weight: normal;
+    border-left: solid 2px #405080;
     color:#000;
-    z-index: 2;
-}
-.tg li:hover .dropdown {
-    display: block;
 }
 
 
@@ -357,6 +364,7 @@ p {
   padding-top: 1rem;
   flex:1;
 }
+
 .right_column{
 	width: 65.9%;
 }
