@@ -245,6 +245,7 @@ p {
     font-weight: normal;
     border-left: solid 2px #405080;
     color:#000;
+    cursor: default;
 }
 
 
