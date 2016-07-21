@@ -193,6 +193,13 @@ iframe, .static_view {
 #photo_viewer:hover h2, #photo_viewer:active h2 {
     opacity: 0
 }
+#view_switch {
+  margin-left: -.5em;
+  margin-top: .5rem;
+}
+#view_switch input {
+  margin-left: .5em;
+}
 
 /* MAP VIEW */
 .map-container iframe{
@@ -425,6 +432,9 @@ iframe, .static_view {
  }
  .tg td{
    padding:10px 10px;
+ }
+ #view_switch{
+   font-size: .9em;
  }
 }
 
